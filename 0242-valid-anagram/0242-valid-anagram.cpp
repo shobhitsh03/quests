@@ -3,23 +3,23 @@ public:
     bool isAnagram(string s, string t) {
         if(s.length()!=t.length()){
             return false;
-
         }
 
         sort(s.begin(),s.end());
         sort(t.begin(),t.end());
 
-        int left=0;
-        int right=0;
+        int i=0;
+        int j=0;
 
-        while(right<t.length()){
-            if(t[right]!=s[left]){
+        while(i<t.length()){
+            if(s[i] != t[j]){
                 return false;
             }
 
-            right++;
-            left++;
+            i++;
+            j++;
         }
-        return true;
+
+        return s==t;
     }
 };
