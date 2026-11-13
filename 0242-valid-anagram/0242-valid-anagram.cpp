@@ -20,6 +20,6 @@ public:
             j++;
         }
 
-        return s==t;
+        return true;
     }
 };
